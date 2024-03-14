@@ -32,9 +32,13 @@ feature engineering (특성공학)
 농어길이 x 농어 높이 라는 새로운 특성을 만드는것.
 
 
-```mermaid
-pie title hi 
-"hi": 100
-"test": 292
-"Tats": 12
-```
+
+
+
+
+
+
+
+
+ref : https://mermaid.js.org/syntax/examples.html
+
