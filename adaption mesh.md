@@ -44,13 +44,26 @@
 1. include Votex Indicator 옵션 : 와동 크기를 지정.
 2. Spark Region refinement 옵션 : 구형 스파크 region의 반경 및 적용 시간 등을 적용해서 조밀화를 진행.
 
-먼저 initialize 또는 솔버를 실행하여 데이터 생성
+3. solution>cellresiters>temperature_refinement>Edit...
+온도에 대한 STD LIMIT 보다 크면 REMARK, Adaption 하겠다! 
+![flame](https://ansyshelp.ansys.com/Views/Secured/corp/v231/en/flu_ug/graphics/g_flu_ug_adapt_com_reg.png)
+
 
 
 ### 4. multiphase
+> vof 모델 활성화시 사용
 
 ![expression](https://ansyshelp.ansys.com/Views/Secured/corp/v231/ko/flu_ug/graphics/g_flu_ug_adapt_vof_exp.png)
+- __Volume of Fluid:__ 표준 VOF 시뮬레이션에 적합합니다.
 
+- __VOF-to-DPM [Generic]:__ VOF-DPM 모델 전환 메커니즘을 사용하는 경우에 적합합니다. 결과 어댑션 기준은 상당히 간단한 셀 레지스터를 통해 정의됩니다.
+
+- __VOF-to-DPM [Advanced]:__ VOF-DPM 모델 전환 메커니즘을 사용하는 경우에 적합합니다. 결과 어댑션 기준은 셀 레지스터를 사용하는 복잡한 표현식과 정의에 필요한 매개변수를 통해 정의됩니다.
+
+![vof_Criteria](https://ansyshelp.ansys.com/Views/Secured/corp/v231/ko/flu_ug/graphics/flu_ug_adapt_crit_set.png)
+
+### 5. overset
+이동하는 메쉬나 동적메쉬
 ____
 ```md
 셀 레지스터(셀 마킹)의 수단
